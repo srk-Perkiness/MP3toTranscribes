@@ -13,4 +13,22 @@ __pycache__/
 
 # Logs
 *.log
+
+# Audio files
 *.wav
+*.mp3
+*.m4a
+*.ogg
+*.flac
+
+# Transcripts and outputs
+transcripts/
+outputs/
+temp/
+*.txt
+*.md
+*.pdf
+transcribe.*
+# Temporary files
+tmp_*
+temp_*

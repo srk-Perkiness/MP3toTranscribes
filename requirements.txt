@@ -61,3 +61,14 @@ typer-slim==0.21.1
 typing_extensions==4.15.0
 tzdata==2025.3
 urllib3==2.6.3
+
+# NEW DEPENDENCIES FOR LECTURE NOTES APP
+librosa==0.10.2
+matplotlib==3.9.0
+markdown2==2.5.2
+weasyprint==63.1
+
+# LANGCHAIN DEPENDENCIES
+langchain==0.3.0
+langchain-core==0.3.0
+langchain-ollama==0.2.0
