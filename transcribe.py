@@ -68,22 +68,27 @@ Transcript:
 # OLLAMA SUMMARY FUNCTION
 # =========================
 def generate_summary_ollama(prompt: str) -> str:
-    response = requests.post(
-        OLLAMA_CHAT_URL,
-        json={
-            "model": OLLAMA_MODEL,
-            "messages": [
-                {"role": "user", "content": prompt}
-            ],
-            "stream": False,
-            "options": {
-                "temperature": 0.2
-            }
-        },
-        timeout=600
-    )
-    response.raise_for_status()
-    return response.json()["message"]["content"]
+    try:
+        response = requests.post(
+            "http://localhost:11434/api/chat",
+            json={
+                "model": "llama3",
+                "messages": [{"role": "user", "content": prompt}],
+                "stream": False,
+            },
+            timeout=600,
+        )
+        response.raise_for_status()
+        return response.json()["message"]["content"]
+
+    except requests.exceptions.ConnectionError:
+        st.warning(
+            "Ollama is not running.\n\n"
+            "Start it locally with:\n"
+            "`ollama serve`\n\n"
+            "Showing transcript only."
+        )
+        return "⚠️ Summary unavailable (Ollama not running)."
 
 # =========================
 # PROCESS
