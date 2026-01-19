@@ -70,5 +70,5 @@ weasyprint==63.1
 
 # LANGCHAIN DEPENDENCIES
 langchain==0.3.0
-langchain-core==0.3.0
+langchain-core==0.3.81
 langchain-ollama==0.2.0
