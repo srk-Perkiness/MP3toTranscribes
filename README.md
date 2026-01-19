@@ -1,30 +1,26 @@
-Below is a clean, professional README.md you can drop straight into your GitHub repo.
-It’s written for developers and reviewers, with clear setup, usage, and troubleshooting.
-
-⸻
-
 🎙️ MP3toTranscribe
 
 Local Audio Transcription & AI Summarization (Whisper + Ollama)
 
-A 100% local, privacy-first application that converts long audio recordings (meetings, lectures, interviews) into clean transcripts and structured summaries — with no cloud services and no API keys.
+MP3toTranscribe is a 100% local, privacy-first application that converts long audio recordings—meetings, lectures, and interviews—into accurate transcripts and structured AI summaries.
+No cloud services. No API keys. No data leaves your machine.
 
 Built with:
-	•	faster-whisper (local speech-to-text)
-	•	Ollama (local LLM summaries)
-	•	Streamlit (simple UI)
+	•	faster-whisper – local speech-to-text
+	•	Ollama – local LLM summarization
+	•	Streamlit – lightweight web UI
 
 Optimized for Apple Silicon (M1 / M2 / M3).
 
 ⸻
 
 ✨ Features
-	•	🎧 Upload audio recorded on iPhone Voice Recorder (.m4a, .mp3, .wav)
+	•	🎧 Upload audio from iPhone Voice Memos (.m4a, .mp3, .wav)
 	•	⚡ Fast local transcription using faster-whisper
-	•	🧠 High-quality AI summaries using Ollama (Llama 3 / Mistral)
-	•	🔒 Fully offline — no data leaves your machine
+	•	🧠 High-quality summaries using Ollama (Llama 3 / Mistral)
+	•	🔒 Fully offline and privacy-safe
 	•	📦 Supports large files (up to 500MB / ~8 hours)
-	•	💰 $0 usage cost
+	•	💰 Zero usage cost
 	•	🍎 Tuned for Apple Silicon performance
 
 ⸻
@@ -68,7 +64,7 @@ cd MP3toTranscribe
 
 ⸻
 
-2️⃣ Create & Activate Virtual Environment
+2️⃣ Create & Activate a Virtual Environment
 
 python3 -m venv venv
 source venv/bin/activate
@@ -103,12 +99,12 @@ Ollama is running
 
 5️⃣ Increase Upload Limit (500MB)
 
-Create config file:
+Create the Streamlit config file:
 
 mkdir .streamlit
 nano .streamlit/config.toml
 
-Add:
+Add the following:
 
 [server]
 maxUploadSize = 500
@@ -132,20 +128,20 @@ http://localhost:8501
 	2.	Share → Save to Files
 	3.	Upload the audio file in the app
 	4.	Click Transcribe & Summarize
-	5.	Review transcript and AI summary
+	5.	Review the transcript and AI-generated summary
 
 ⸻
 
 🧠 Summary Prompt Logic
 
-The summary is generated locally using this structure:
+Summaries are generated locally with the following structure:
 	•	2–3 sentence high-level overview
 	•	5–8 concise bullet points
 	•	Clear, simple language
 	•	No filler or repetition
 	•	No hallucinated facts
 
-Perfect for busy professionals reviewing long conversations.
+Designed for busy professionals reviewing long conversations.
 
 ⸻
 
@@ -179,7 +175,7 @@ Ensure Ollama is running:
 
 ollama serve
 
-Or check:
+Or verify:
 
 curl http://localhost:11434
 
@@ -193,25 +189,25 @@ brew install ffmpeg
 
 ⸻
 
-❌ Slow performance
-	•	Ensure compute_type="int8" is used (already configured)
-	•	Close other heavy apps
-	•	Use smaller Whisper models if needed
+❌ Slow Performance
+	•	Ensure compute_type="int8" is enabled (default)
+	•	Close other resource-heavy applications
+	•	Use a smaller Whisper model if needed
 
 ⸻
 
 🔐 Privacy & Security
 	•	No cloud APIs
-	•	No data storage outside your machine
-	•	Audio files processed locally and deleted immediately
-	•	Safe for confidential meetings
+	•	No external data storage
+	•	Audio processed locally and deleted immediately
+	•	Safe for confidential meetings and recordings
 
 ⸻
 
 🗺️ Roadmap (Optional Enhancements)
 	•	Auto-chunking for multi-hour files
-	•	Progress bar per chunk
-	•	Export summary as Markdown / PDF
+	•	Per-chunk progress indicators
+	•	Export summaries as Markdown / PDF
 	•	Batch uploads
 	•	Speaker separation (heuristic)
 	•	Docker support
@@ -225,17 +221,19 @@ MIT License
 ⸻
 
 🙌 Acknowledgements
-	•	OpenAI Whisper (open-source)
+	•	OpenAI Whisper (open source)
 	•	faster-whisper / CTranslate2
 	•	Ollama
 	•	Streamlit
 
 ⸻
 
-If you want, I can also:
-	•	Add badges (Python, license, platform)
-	•	Create a Docker README
-	•	Split setup into Quick Start vs Advanced
-	•	Add screenshots or demo GIFs
+Want more?
 
-Just tell me 👍# MP3toTranscribe
+I can also:
+	•	Add GitHub badges (Python, license, platform)
+	•	Create a Docker-specific README
+	•	Split setup into Quick Start vs Advanced
+	•	Add screenshots or a demo GIF
+
+Just say the word 👍
